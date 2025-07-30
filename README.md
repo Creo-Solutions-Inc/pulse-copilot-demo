@@ -1,4 +1,4 @@
-# Pulse Co-Pilot – User Journey & Feature Guide 
+# Pulse Co-Pilot – User Journey & Feature Guide. 
 
 Welcome to Pulse Co-Pilot, your AI-powered call analytics and daily recap system that transforms conversations into actionable insights. This guide walks you through every feature and how to use it effectively.
 
