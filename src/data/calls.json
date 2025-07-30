@@ -1,0 +1,131 @@
+[
+  {
+    "id": "1",
+    "time": "2024-01-15T09:30:00Z",
+    "internalNumber": "+1-555-0101",
+    "externalNumber": "+1-555-0202",
+    "callType": "Inbound",
+    "callOutcome": "Completed",
+    "sentiment": "Positive",
+    "qualityScore": 85,
+    "duration": "00:05:32",
+    "summary": "Customer inquired about product features and pricing. Provided detailed information about enterprise plan benefits.",
+    "actionItems": [
+      "Follow up with pricing proposal",
+      "Schedule demo for next week"
+    ]
+  },
+  {
+    "id": "2",
+    "time": "2024-01-15T10:15:00Z",
+    "internalNumber": "+1-555-0102",
+    "externalNumber": "+1-555-0303",
+    "callType": "Outbound",
+    "callOutcome": "Completed",
+    "sentiment": "Neutral",
+    "qualityScore": 72,
+    "duration": "00:03:45",
+    "summary": "Proactive call to existing customer. Discussed renewal options and upcoming features.",
+    "actionItems": [
+      "Send renewal reminder",
+      "Update customer preferences"
+    ]
+  },
+  {
+    "id": "3",
+    "time": "2024-01-15T11:00:00Z",
+    "internalNumber": "+1-555-0103",
+    "externalNumber": "+1-555-0404",
+    "callType": "Inbound",
+    "callOutcome": "Missed",
+    "sentiment": "N/A",
+    "qualityScore": 0,
+    "duration": "00:00:00",
+    "summary": "Missed call - no voicemail left",
+    "actionItems": [
+      "Return call within 24 hours"
+    ]
+  },
+  {
+    "id": "4",
+    "time": "2024-01-15T13:20:00Z",
+    "internalNumber": "+1-555-0101",
+    "externalNumber": "+1-555-0505",
+    "callType": "Inbound",
+    "callOutcome": "Completed",
+    "sentiment": "Negative",
+    "qualityScore": 45,
+    "duration": "00:08:15",
+    "summary": "Customer complaint about service quality. Escalated to supervisor for resolution.",
+    "actionItems": [
+      "Escalate to support team",
+      "Schedule follow-up call",
+      "Review service procedures"
+    ]
+  },
+  {
+    "id": "5",
+    "time": "2024-01-15T14:45:00Z",
+    "internalNumber": "+1-555-0102",
+    "externalNumber": "+1-555-0606",
+    "callType": "Outbound",
+    "callOutcome": "Completed",
+    "sentiment": "Positive",
+    "qualityScore": 92,
+    "duration": "00:06:30",
+    "summary": "Successful upsell conversation. Customer upgraded to premium plan.",
+    "actionItems": [
+      "Process upgrade paperwork",
+      "Schedule onboarding call",
+      "Update customer profile"
+    ]
+  },
+  {
+    "id": "6",
+    "time": "2024-01-15T16:10:00Z",
+    "internalNumber": "+1-555-0103",
+    "externalNumber": "+1-555-0707",
+    "callType": "Inbound",
+    "callOutcome": "Completed",
+    "sentiment": "Positive",
+    "qualityScore": 78,
+    "duration": "00:04:22",
+    "summary": "Technical support call. Resolved user authentication issue.",
+    "actionItems": [
+      "Document solution in knowledge base",
+      "Follow up with user in 24 hours"
+    ]
+  },
+  {
+    "id": "7",
+    "time": "2024-01-15T17:30:00Z",
+    "internalNumber": "+1-555-0101",
+    "externalNumber": "+1-555-0808",
+    "callType": "Inbound",
+    "callOutcome": "Missed",
+    "sentiment": "N/A",
+    "qualityScore": 0,
+    "duration": "00:00:00",
+    "summary": "Missed call - voicemail left",
+    "actionItems": [
+      "Return call tomorrow morning",
+      "Check voicemail for details"
+    ]
+  },
+  {
+    "id": "8",
+    "time": "2024-01-15T18:00:00Z",
+    "internalNumber": "+1-555-0102",
+    "externalNumber": "+1-555-0909",
+    "callType": "Outbound",
+    "callOutcome": "Completed",
+    "sentiment": "Neutral",
+    "qualityScore": 65,
+    "duration": "00:02:15",
+    "summary": "Quick check-in call. Customer confirmed satisfaction with current service.",
+    "actionItems": [
+      "Update customer status",
+      "Schedule next check-in"
+    ]
+  }
+] 
