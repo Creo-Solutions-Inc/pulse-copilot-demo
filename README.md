@@ -13,11 +13,10 @@ Clean, professional login interface with Pulse Co-Pilot branding
 
 White-label ready (CSP logo placeholder)
 
-Language toggle (EN / 日本語) for localization readiness
-
 Demo Mode: Any credentials will work for testing
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/59c44509-c27a-4f08-baa5-1583120bd5d1" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/48072dc1-9325-4fc0-8184-20c09bbd085e" />
+
 
 
 
@@ -45,13 +44,14 @@ Recent Activity Feed:
 
 Latest calls with timestamps and sentiment indicators
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/41fd8054-d6d5-4e29-bad1-7ec422631d47" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/d335c3e3-c3b9-418f-acd7-0cb3c1df0094" />
+
 
 
 
 ### 3. Call List
 
-Url : /calls
+Url: /calls
 
 What you'll see:
 
@@ -63,7 +63,7 @@ Sentiment badges (color-coded)
 
 Click any row → View details
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/f9dbe11d-45f5-4318-bb9c-720630c2ed3f" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/05c3b747-4225-438f-b079-bde5bd503dea" />
 
 
 
@@ -87,7 +87,7 @@ Download Recording
 
 View Transcript
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/adaa13f3-d18b-4e3e-8d56-1ae1fba0ebca" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/ce808e4d-9d4a-4386-8e82-e6ebd5c72a30" />
 
 
 ### Configuration Tab
@@ -112,7 +112,7 @@ Real-time configuration preview
 
 Template variable reference
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/2f8db1b8-82bc-412c-acc1-ee8ac04918d1" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/d218e770-cfdf-47b3-9268-9119e14d03b9" />
 
 
 
@@ -135,8 +135,7 @@ Send time
 
 Preview of daily summary email layout
 
-![Screenshot 2025-07-30 at 15 59 14](https://github.com/user-attachments/assets/e1db5407-7a7c-4edd-8f1f-581c2783360a)
-
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/f1f27c57-6e85-47ff-a5a1-d7d10b089e4c" />
 
 
 
@@ -152,7 +151,7 @@ Complete email templates with sample call data
 
 Professional formatting and branding
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/4248ba29-fec4-4b73-85f6-02a461f0a9bf" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/79d9f1e6-f84c-4a7b-81b2-494d4551f6d2" />
 
 
 
@@ -172,47 +171,73 @@ Action items
 
 Email-ready templates for CSPs
 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/62360088-9836-4bab-9192-0a7ba1fc23fd" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/a82d9ce5-d4de-45db-b5eb-e2c4b447b8c0" />
 
 
 
-### User Journey Scenarios
+## **User Journey Scenarios**
 
-### Scenario 1: Daily Call Review
+These scenarios demonstrate the primary user flows for Pulse Co-Pilot.
 
-Start: Login → Dashboard
+---
 
-Check: Daily metrics overview
+### **Primary Scenario 1: End-of-Call Summary**
+**Goal:** Show how a user experiences an email summary immediately after a call.
 
-Go to: Call List → Filter & Search
+**Steps:**
+1. Complete a call monitored by Pulse Co-Pilot.
+2. Open your **Email Inbox** (configured recipient list).
+3. View the **End-of-Call Summary Email**, which includes:
+   - Call details (internal number, external number, time, duration).
+   - AI-generated summary of the conversation.
+   - Sentiment and quality score.
+   - Action items for follow-up.
+4. If needed, click links in the email to:
+   - View call details in Pulse Co-Pilot.
+   - Download recording or view transcript.
 
-Drill Down: View Call Details
+---
 
-Review Emails: Open Mail Box previews
+### **Primary Scenario 2: Daily Recap Email**
+**Goal:** Demonstrate how the daily summary provides a full view of call activity.
 
-Adjust: Config settings if needed
+**Steps:**
+1. At the configured time (e.g., 6:00 PM), Pulse Co-Pilot sends a **Daily Recap Email**.
+2. Open the email to review:
+   - Aggregated metrics: total calls, answered/missed, sentiment breakdown.
+   - List of all calls with one-line summaries.
+   - Highlighted action items and top insights for the day.
+3. If needed, click any call from the email to:
+   - Open its details page in Pulse Co-Pilot.
+   - Drill down for sentiment analysis and recommendations.
 
-### Scenario 2: Email Configuration
+---
 
-Navigate to Configuration
+### Scenario 3: Daily Call Review
+**Start:** Login → Dashboard  
+**Check:** Daily metrics overview  
+**Go to:** Call List → Filter & Search  
+**Drill Down:** View Call Details  
+**Review Emails:** Open Mail Box previews  
+**Adjust:** Config settings if needed  
 
-Modify subject lines, recipients, or intro text
+---
 
-Preview changes in real-time
+### Scenario 4: Email Configuration
+- Navigate to **Configuration**.
+- Modify subject lines, recipients, or intro text.
+- Preview changes in real-time.
+- Verify final format in **Mail Box**.
 
-Verify final format in Mail Box
+---
 
-### Scenario 3: Call Analysis
+### Scenario 5: Call Analysis
+- Access **Call List** from Dashboard.
+- Apply filters to find important calls.
+- Click for detailed analytics.
+- Review sentiment and action items.
 
-Access Call List from Dashboard
 
-Apply filters to find important calls
-
-Click for detailed analytics
-
-Review sentiment and action items
-
-### Key Features by Location
 
 | **Feature**        | **Location**                 |
 | ------------------ | ---------------------------- |
