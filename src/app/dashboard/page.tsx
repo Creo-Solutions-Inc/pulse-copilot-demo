@@ -135,11 +135,12 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <Card 
           title="Call List" 
           className="text-center hover:shadow-lg transition-shadow cursor-pointer"
           onClick={() => window.location.href = '/calls'}
+          hover={true}
         >
           <div className="flex items-center justify-center mb-4">
             <FileText size={32} className="text-blue-600" />
@@ -151,55 +152,42 @@ export default function DashboardPage() {
           title="Configuration" 
           className="text-center hover:shadow-lg transition-shadow cursor-pointer"
           onClick={() => window.location.href = '/configuration/end-of-call'}
+          hover={true}
         >
           <div className="flex items-center justify-center mb-4">
             <Settings size={32} className="text-purple-600" />
           </div>
           <p className="text-gray-600">Configure email settings and preferences</p>
         </Card>
-
-        <Card 
-          title="Email Previews" 
-          className="text-center hover:shadow-lg transition-shadow cursor-pointer"
-                        onClick={() => window.location.href = '/mailbox/end-of-call'}
-        >
-          <div className="flex items-center justify-center mb-4">
-            <Mail size={32} className="text-green-600" />
-          </div>
-          <p className="text-gray-600">Preview email templates and summaries</p>
-        </Card>
       </div>
 
       {/* Recent Activity */}
-      <div className="mt-8">
-        <Card title="Recent Calls">
-          <div className="space-y-4">
-            {(callsData as CallData[]).slice(0, 5).map((call) => (
-              <div key={call.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center justify-center w-6 h-6">
-                    {getSentimentIcon(call.sentiment)}
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">
-                      {call.internalNumber} → {call.externalNumber}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {new Date(call.time).toLocaleTimeString()} • {call.callType}
-                    </div>
-                  </div>
+      <Card title="Recent Calls">
+        <div className="space-y-4">
+          {(callsData as CallData[]).slice(0, 5).map((call) => (
+            <div key={call.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center justify-center w-6 h-6">
+                  {getSentimentIcon(call.sentiment)}
                 </div>
-                <div className="text-right">
-                  <div className="text-sm font-medium text-gray-900">
-                    {call.duration}
+                <div>
+                  <div className="font-medium text-gray-900">
+                    {call.internalNumber} → {call.externalNumber}
                   </div>
-
+                  <div className="text-sm text-gray-600">
+                    {new Date(call.time).toLocaleTimeString()} • {call.callType}
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </Card>
-      </div>
+              <div className="text-right">
+                <div className="text-sm font-medium text-gray-900">
+                  {call.duration}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
     </div>
   );
 } 

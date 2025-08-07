@@ -16,12 +16,11 @@ const Card: React.FC<CardProps> = ({
   hover = false,
 }) => {
   const baseClasses = 'bg-white rounded-lg shadow-sm border border-gray-200 p-6';
-  const hoverClasses = hover ? 'hover:shadow-md hover:border-gray-300 transition-all duration-200 cursor-pointer' : '';
-  const clickableClasses = onClick ? 'cursor-pointer' : '';
-
+  const hoverClasses = hover || onClick ? 'hover:shadow-md hover:border-gray-300 transition-all duration-200 cursor-pointer' : '';
+  
   return (
     <div 
-      className={`${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`}
+      className={`${baseClasses} ${hoverClasses} ${className}`}
       onClick={onClick}
     >
       {title && (

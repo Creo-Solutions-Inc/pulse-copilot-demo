@@ -31,6 +31,11 @@ const navItems: NavItem[] = [
     icon: <BarChart3 size={18} />
   },
   {
+    label: 'Call List',
+    href: '/calls',
+    icon: <Phone size={18} />
+  },
+  {
     label: 'Configuration',
     href: '/configuration',
     icon: <Settings size={18} />,
@@ -38,34 +43,6 @@ const navItems: NavItem[] = [
       { label: 'End-of-Call', href: '/configuration/end-of-call', icon: <FileText size={16} /> },
       { label: 'End-of-Day', href: '/configuration/end-of-day', icon: <Clock size={16} /> }
     ]
-  },
-  {
-    label: 'Mail Box',
-    href: '/mailbox',
-    icon: <Mail size={18} />,
-    children: [
-      { label: 'End-of-Call', href: '/mailbox/end-of-call', icon: <FileText size={16} /> },
-      { label: 'End-of-Day', href: '/mailbox/end-of-day', icon: <Clock size={16} /> }
-    ]
-  },
-  {
-    label: 'Mail Box (Japan)',
-    href: '/mailbox-jp',
-    icon: <Mail size={18} />,
-    children: [
-      { label: 'End-of-Call', href: '/mailbox-jp/end-of-call', icon: <FileText size={16} /> },
-      { label: 'End-of-Day', href: '/mailbox-jp/end-of-day', icon: <Clock size={16} /> }
-    ]
-  },
-  {
-    label: 'Call List',
-    href: '/calls',
-    icon: <Phone size={18} />
-  },
-  {
-    label: 'Call List (Japan)',
-    href: '/calls-jp',
-    icon: <Phone size={18} />
   }
 ];
 
