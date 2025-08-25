@@ -43,6 +43,15 @@ const navItems: NavItem[] = [
       { label: 'End-of-Call', href: '/configuration/end-of-call', icon: <FileText size={16} /> },
       { label: 'End-of-Day', href: '/configuration/end-of-day', icon: <Clock size={16} /> }
     ]
+  },
+  {
+    label: 'Mailbox',
+    href: '/mailbox',
+    icon: <Mail size={18} />,
+    children: [
+      { label: 'End-of-Call', href: '/mailbox/end-of-call', icon: <FileText size={16} /> },
+      { label: 'End-of-Day', href: '/mailbox/end-of-day', icon: <Clock size={16} /> }
+    ]
   }
 ];
 
