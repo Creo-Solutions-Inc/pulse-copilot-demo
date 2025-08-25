@@ -14,6 +14,9 @@ interface CallDetail {
   actionItems: string[];
 }
 
+// Use fixed dates to avoid hydration mismatch
+const SAMPLE_DATE = '31/07/2025';
+
 const callDetails: CallDetail[] = [
   {
     time: '12:30:00',
@@ -65,53 +68,53 @@ const metrics = {
 export default function EndOfDayMailboxPage() {
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-2">End-of-Day Email Preview</h1>
-      <p className="text-gray-600 mb-6">Preview how daily call summaries will appear in emails</p>
+      <h1 className="text-2xl font-bold text-gray-900 mb-2">End-of-Day Email Preview</h1>
+      <p className="text-gray-700">Preview how daily call summaries will appear in emails</p>
 
-      <Card>
+      <Card className="mt-6">
         <div className="space-y-6">
           <div>
-            <h2 className="text-lg font-medium mb-2">Email Preview</h2>
+            <h2 className="text-lg font-medium text-gray-900 mb-2">Email Preview</h2>
             
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-gray-600">Subject:</p>
-                <p className="font-medium">Daily Call Recap - 31/07/2025</p>
+                <p className="text-sm font-medium text-gray-700">Subject:</p>
+                <p className="text-gray-900">Daily Call Recap - {SAMPLE_DATE}</p>
               </div>
 
               <div>
-                <p className="text-sm text-gray-600">Introduction:</p>
-                <p>Your daily summary of all calls, including key metrics and action items for tomorrow.</p>
+                <p className="text-sm font-medium text-gray-700">Introduction:</p>
+                <p className="text-gray-900">Your daily summary of all calls, including key metrics and action items for tomorrow.</p>
               </div>
 
               <div>
-                <h3 className="font-medium mb-4">Daily Summary</h3>
+                <h3 className="font-medium text-gray-900 mb-4">Daily Summary</h3>
                 <div className="grid grid-cols-4 gap-4 mb-6">
                   <div className="text-center">
                     <p className="text-2xl font-bold text-blue-600">{metrics.totalCalls}</p>
-                    <p className="text-sm text-gray-600">Total Calls</p>
+                    <p className="text-sm font-medium text-gray-700">Total Calls</p>
                   </div>
                   <div className="text-center">
                     <p className="text-2xl font-bold text-green-600">{metrics.completed}</p>
-                    <p className="text-sm text-gray-600">Completed</p>
+                    <p className="text-sm font-medium text-gray-700">Completed</p>
                   </div>
                   <div className="text-center">
                     <p className="text-2xl font-bold text-red-600">{metrics.missed}</p>
-                    <p className="text-sm text-gray-600">Missed</p>
+                    <p className="text-sm font-medium text-gray-700">Missed</p>
                   </div>
                   <div className="text-center">
                     <p className="text-2xl font-bold text-purple-600">{metrics.actionItems}</p>
-                    <p className="text-sm text-gray-600">Action Items</p>
+                    <p className="text-sm font-medium text-gray-700">Action Items</p>
                   </div>
                 </div>
               </div>
 
               <div>
-                <p className="mb-2">Call Details:</p>
+                <p className="font-medium text-gray-900 mb-2">Call Details:</p>
                 <div className="overflow-x-auto">
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead>
-                      <tr className="text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <tr className="text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                         <th className="px-4 py-2">TIME</th>
                         <th className="px-4 py-2">INTERNAL #</th>
                         <th className="px-4 py-2">EXTERNAL #</th>
@@ -125,12 +128,12 @@ export default function EndOfDayMailboxPage() {
                     <tbody className="divide-y divide-gray-200">
                       {callDetails.map((call, index) => (
                         <tr key={index} className="text-sm">
-                          <td className="px-4 py-3">{call.time}</td>
-                          <td className="px-4 py-3">{call.internalNumber}</td>
-                          <td className="px-4 py-3">{call.externalNumber}</td>
-                          <td className="px-4 py-3">{call.type}</td>
+                          <td className="px-4 py-3 text-gray-900">{call.time}</td>
+                          <td className="px-4 py-3 text-gray-900">{call.internalNumber}</td>
+                          <td className="px-4 py-3 text-gray-900">{call.externalNumber}</td>
+                          <td className="px-4 py-3 text-gray-900">{call.type}</td>
                           <td className="px-4 py-3">
-                            <span className={`px-2 py-1 rounded-full text-xs ${
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                               call.sentiment === 'Positive' ? 'bg-green-100 text-green-800' :
                               call.sentiment === 'Negative' ? 'bg-red-100 text-red-800' :
                               'bg-yellow-100 text-yellow-800'
@@ -138,18 +141,18 @@ export default function EndOfDayMailboxPage() {
                               {call.sentiment}
                             </span>
                           </td>
-                          <td className="px-4 py-3">{call.summary}</td>
+                          <td className="px-4 py-3 text-gray-900">{call.summary}</td>
                           <td className="px-4 py-3">
                             <ul className="list-disc list-inside">
                               {call.actionItems.map((item, i) => (
-                                <li key={i} className="text-xs text-gray-600">{item}</li>
+                                <li key={i} className="text-gray-700">{item}</li>
                               ))}
                             </ul>
                           </td>
                           <td className="px-4 py-3">
                             <button 
                               onClick={() => window.location.href = '/mailbox/end-of-call'}
-                              className="flex items-center text-blue-600 hover:text-blue-800 text-sm"
+                              className="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"
                             >
                               <Eye size={16} className="mr-1" />
                               View Details
